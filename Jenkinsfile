@@ -1,11 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('checkout'){
+        stage('Prepare'){
             steps {
-                git branch : 'main',
-                credentialsId : 'mhs',
-                url : 'https://github.com/mhs442/IntegrationTest.git'
+                git credentialsId : 'mhs',
+                    branch : 'main',
+                    url : 'git@github.com:mhs442/IntegrationTest.git'
             }
         }
         stage('test') {
