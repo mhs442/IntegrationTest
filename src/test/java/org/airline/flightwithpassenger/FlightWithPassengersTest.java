@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class FlightWithPassengersTest {
@@ -28,6 +29,7 @@ public class FlightWithPassengersTest {
         Passenger passenger = new Passenger("123-45-6789", "Jhon Smith", "US");
         Flight flight = new Flight("AA123", 100);
         passenger.joinFlight(flight);
+        assertThat(flight).isEqualTo(passenger.getFlight());
         assertEquals(flight, passenger.getFlight());
         assertEquals(1, flight.getNumberOfPassengers());
     }
