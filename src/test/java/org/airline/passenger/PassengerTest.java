@@ -3,6 +3,7 @@ package org.airline.passenger;
 import org.junit.jupiter.api.Test;
 
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PassengerTest {
@@ -25,7 +26,7 @@ public class PassengerTest {
     @Test
     public void testPassengerToString(){
         Passenger passenger = new Passenger("123-45-6789", "Moon haetsal", "KR");
-        assertEquals("123-45-6789", passenger.getIdentifier());
+        assertThat("123-45-6789").isEqualTo(passenger.getIdentifier());
         assertEquals("Moon haetsal", passenger.getName());
         assertEquals("KR", passenger.getCountryCode());
     }
