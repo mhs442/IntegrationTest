@@ -5,7 +5,7 @@ pipeline {
             steps {
                 git credentialsId : 'mhs',
                     branch : 'main',
-                    url : 'git@github.com:mhs442/IntegrationTest.git'
+                    url : 'https://github.com/mhs442/IntegrationTest.git'
             }
         }
         stage('test') {
