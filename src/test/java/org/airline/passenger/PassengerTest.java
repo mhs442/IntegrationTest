@@ -27,7 +27,7 @@ public class PassengerTest {
     public void testPassengerToString(){
         Passenger passenger = new Passenger("123-45-6789", "Moon haetsal", "KR");
         assertThat("123-45-6789").isEqualTo(passenger.getIdentifier());
-        assertEquals("Moon haetsal", passenger.getName());
+        assertThat("Moon haetsal").isEqualTo(passenger.getName());
         assertEquals("KR", passenger.getCountryCode());
     }
 }
